@@ -19,9 +19,8 @@ public class ControllerExample {
         @RequestMapping("/hello/world")
         public String  firstSample()
         {
-        return "First REST API Implementation";
+                return "First REST API Implementation";
         }
-
 
         @GetMapping("/getstudentdetails")
         public List<StudentDetails>  getAllStudentDetails(){
@@ -47,6 +46,20 @@ public class ControllerExample {
             serviceImpl.deleteStudent(id);
             System.out.println("deleted student record");
             return "Deleted Successfully";
+        }
+
+        @RequestMapping("/valid/foreach")
+        public String  firstForEach()
+        {
+                serviceImpl.newForeachMethod();
+                return "List of filters added...";
+        }
+
+        @RequestMapping("/valid/jv8")
+        public String  validstreamApi()
+        {
+                serviceImpl.validateFun();
+                return "validating stream and filters";
         }
 
 }
