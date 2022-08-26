@@ -2,6 +2,8 @@ package com.realprograms.controller;
 
 
 
+import com.realprograms.j8features.Integration;
+import com.realprograms.j8features.OptionalclassExample;
 import com.realprograms.model.StudentDetails;
 import com.realprograms.service.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,10 @@ public class ControllerExample {
 
         @Autowired
         StudentServiceImpl serviceImpl;
+
+        Integration integration ;
+
+        OptionalclassExample optional = new OptionalclassExample();
 
 
         @RequestMapping("/hello/world")
@@ -59,7 +65,25 @@ public class ControllerExample {
         public String  validstreamApi()
         {
                 serviceImpl.validateFun();
+                optional.joiner();
                 return "validating stream and filters";
+        }
+
+        @RequestMapping("/features/added")
+        public String  newFeaturesj8()
+        {
+                integration = new Integration();     // intilization of object;
+                integration.sampleMethod();
+                optional.Optionalmethod();
+                return "success";
+        }
+
+        @RequestMapping("/date/time")
+        public String  dateandtime()
+        {
+                integration = new Integration();
+                integration.dateAndTimeApiExample();
+                return "printing date and time";
         }
 
 }
