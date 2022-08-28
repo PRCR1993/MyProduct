@@ -73,7 +73,7 @@ public class ControllerExample {
         public String  newFeaturesj8()
         {
                 integration = new Integration();     // intilization of object;
-                integration.sampleMethod();
+                //integration.sampleMethod();
                 optional.Optionalmethod();
                 return "success";
         }
@@ -83,6 +83,7 @@ public class ControllerExample {
         {
                 integration = new Integration();
                 integration.dateAndTimeApiExample();
+                integration.sampleMethod();
                 return "printing date and time";
         }
 
